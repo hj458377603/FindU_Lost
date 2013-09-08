@@ -1,0 +1,60 @@
+﻿/*Left*/
+#leftBar {
+    float: left;
+    width: 200px;
+    text-align: center;
+}
+
+    #leftBar ul {
+        height: inherit;
+    }
+
+    #leftBar li {
+        line-height: 40px;
+    }
+
+#type {
+    background-color: #d7edf8;
+    padding: 10px 0;
+}
+
+.ulHead {
+    background-color: #4a95cc;
+    color: white;
+    font-weight: bolder;
+    font-size: small;
+}
+
+.on {
+    background: #4a95cc;
+    color: #FFF;
+    padding: 2px 5px;
+}
+
+
+/* mainContent */
+#mainContentWrapper {
+    width: 620px;
+    float: right;
+    margin-right: 30px;
+}
+
+
+select {
+    width: 91%;
+}
+
+input {
+    width: 90%;
+}
+
+#myReleasedGoods table {
+    border: 1px solid #abbde3;
+    border-collapse: collapse;
+    border-spacing: 1px;
+}
+
+
+    #myReleasedGoods table tr td {
+        border: 1px solid #808080;
+    }

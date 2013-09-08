@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Account" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <!-- alias:取别名;assembly:表示类所在的文件;type:表示该类的完整的名称-->
+    <typeAlias alias="Account"  type="FindU.Lost.Entity.Entity.Account" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="FullTable" class="Account">
+      <!-- property：类中的属性名; column：数据库中的列名，可以起别名-->
+      <result property="UserId" column="UserId" dbType="INT"/>
+      <result property="UserName" column="UserName" dbType="NVARCHAR"/>
+      <result property="Password" column="Password" dbType="NVARCHAR"/>
+    </resultMap>
+
+  </resultMaps>
+
+  <statements>
+
+    <select id="Account.SelectByUserNameAndPwd" parameterClass="Hashtable" resultMap="FullTable">
+      Select * From Account
+      Where UserName=#UserName# and Password=#Password#
+    </select>
+  </statements>
+</sqlMap>

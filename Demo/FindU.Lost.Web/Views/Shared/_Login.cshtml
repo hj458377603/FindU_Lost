@@ -1,0 +1,10 @@
+﻿@model FindU.Lost.Entity.Entity.Account
+
+@if (Model == null)
+{
+    @Html.ActionLink("登录", "Login", "Account") <span>|</span> @Html.ActionLink("注册", "Register", "Account")
+}
+else
+{
+    <span>欢迎</span><a href="#">@Model.UserName</a>
+}

@@ -1,0 +1,27 @@
+﻿#leftWrapper {
+    float:left;
+    width: 250px;
+    border-right:dashed 1px;
+}
+
+#upDiv {
+    width: 200px;
+}
+
+.login {
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+#mainContentWrapper {
+    width: 620px;
+    float:right;
+}
+
+
+#downDiv {
+    margin-top:40px;
+    border-top:dashed 1px;
+    width: 200px;
+}

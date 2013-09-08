@@ -1,0 +1,29 @@
+﻿@section header{
+    @Styles.Render("~/css/login.css")
+}
+
+@section main{
+    <div id="leftBar">
+        <div id="leftWrapper">
+            <div id="upDiv">
+                <input type="text" class="login" placeholder="用户名" />
+                <br />
+                <input type="password" class="login" placeholder="密码" />
+                <br />
+                <input type="password" class="login" placeholder="确认密码" />
+                <br />
+                <input type="password" class="login" placeholder="Email/用于找回密码" />
+                <br />
+                <input type="submit" value="注册" class="login" onclick="window.open('/userInfo.html', '_self')" />
+            </div>
+            <div id="downDiv">
+                <input type="button" id="btnLogin" value="登录" class="login" onclick="window.open('/login.html', '_self')" />
+            </div>
+        </div>
+    </div>
+    <div id="mainContent">
+        <div id="mainContentWrapper">
+            <img src="~/img/loginImg/loginImg9_600_427.png" />
+        </div>
+    </div>
+}

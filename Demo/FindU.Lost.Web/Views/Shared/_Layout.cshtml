@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/css/layout.css")
+    @Styles.Render("~/css/default.css")
+
+    @Scripts.Render("~/js/jquery-1.7.1.js")
+    @Scripts.Render("~/js/default.js")
+
+    @RenderSection("header", false)
+</head>
+<body>
+    <div id="top">
+        <div id="header">
+            <a title="FindU" href="/" class="logo"></a>
+            <ul class="navbar">
+                <li><a href="#" class="on">首页</a></li>
+                <li><a href="#">移动客户端下载</a></li>
+                <li><a href="#">数据统计</a></li>
+                <li><a href="#">寻找小伙伴</a></li>
+            </ul>
+        </div>
+        <div id="top_login">
+            @Html.Partial("_Login")
+        </div>
+    </div>
+
+    <div id="contentWrapper" class="clearfix">
+        @RenderSection("main", false);
+    </div>
+
+    <div id="footer" class="clearfix">
+        <p id="back-to-top">
+            <a href="#top"></a>
+        </p>
+        &copy;2013 <a href="#">小俊学长</a>
+        <ul class="fright clearfix">
+            <li><a href="/">首页</a>·</li>
+            <li><a href="#">应用下载</a>·</li>
+            <li><a href="#">提建议</a>·</li>
+            <li><a href="#">关于我们</a>·</li>
+            <li><a href="#">免责声明</a></li>
+        </ul>
+    </div>
+</body>
+@RenderSection("scripts", required: false)
+</html>

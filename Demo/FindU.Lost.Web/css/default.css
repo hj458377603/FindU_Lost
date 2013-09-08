@@ -1,0 +1,227 @@
+﻿/************************
+    作者：小俊学长
+    时间：2013年8月31日
+************************/
+
+/* 通用部分 */
+h2 {
+    font-size: 30px;
+}
+
+.divButton {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #0ea6fe;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .divButton:hover {
+        background-color: #03a34b;
+    }
+
+.dashLineMarginTop {
+    border-top: dashed 1px;
+    margin: 10px 0;
+}
+
+.small_tip {
+    font-size: small;
+    color: #888;
+    margin-top: 20px;
+}
+
+
+
+/* 浮动导航栏 */
+#floatNav {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 55px;
+}
+
+    #floatNav ul {
+        list-style: none;
+    }
+
+        #floatNav ul li {
+            line-height: 30px;
+            float: none;
+            width: 55px;
+            height: 30px;
+            color: white;
+            margin-bottom: 1px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 8px;
+            font-weight: 600;
+            background-color: #03a34b;
+        }
+
+            #floatNav ul li:hover {
+                background-color: #0ea6fe;
+                cursor: pointer;
+            }
+
+.floatNavOn {
+    background-color: red;
+}
+
+/* 浮动返回顶部 */
+p#back-to-top {
+    position: fixed;
+    bottom: 50px;
+    left: 90%;
+}
+
+    p#back-to-top a {
+        display: block;
+        width: 53px;
+        height: 53px;
+        background: url(/img/q_back2top_default.png) 0px 0px no-repeat;
+    }
+
+        p#back-to-top a:hover {
+            background: url(/img/q_back2top_default.png) -70px 0px no-repeat;
+        }
+
+
+/* 动态磁贴 */
+.tile_outside {
+    height: 150px;
+    overflow: hidden;
+    float: left;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.tile_inside {
+    position: relative;
+    width: 150px;
+}
+
+.tile_text {
+    width: 150px;
+    height: 150px;
+    background: #0ea6fe;
+    padding: 10px;
+    color: #fff;
+}
+
+.tile_img {
+    width: 150px;
+    height: 150px;
+}
+
+/* 我要发布 */
+#IRelease {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #0ea6fe;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    #IRelease:hover {
+        background-color: #03a34b;
+    }
+
+
+/* 顶部登陆导航 */
+
+#top_login {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+    margin-right: 40px;
+    margin-top: 60px;
+    line-height: 30px;
+    color: white;
+}
+
+    #top_login a {
+        color: white;
+    }
+
+/* 搜索 */
+#filter_search {
+    width: 960px;
+    height: 100px;
+    color: black;
+}
+
+    #filter_search ul {
+        list-style: none;
+        float: left;
+    }
+
+        #filter_search ul li {
+            list-style: none;
+            float: left;
+            margin-right: 10px;
+            line-height: 30px;
+            height: 30px;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #0ea6fe;
+        }
+
+            #filter_search ul li a {
+                color: white;
+            }
+
+            #filter_search ul li:hover {
+                background-color: #03a34b;
+            }
+
+            #filter_search ul li a:hover {
+                background-color: #03a34b;
+            }
+
+
+
+    #filter_search p {
+        list-style: none;
+        margin: 0 10px 0 0px;
+        line-height: 30px;
+        height: 30px;
+        text-align: center;
+        float: left;
+        vertical-align: middle;
+    }
+
+    #filter_search .selected {
+        background-color: #03a34b;
+        height: 30px;
+    }
+
+
+/* 载入更多物品 */
+#goods_more_loading {
+    width: 960px;
+    height: 30px;
+    background-color: #eff1e2;
+    font-size: 13px;
+    color: #0ea6fe;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+    #goods_more_loading a:hover {
+        color: #03a34b;
+        background-color: #eff1e2;
+    }

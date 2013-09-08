@@ -1,0 +1,97 @@
+﻿@section header{
+    @Styles.Render("~/css/indexContent.css")
+}
+
+@section main{
+    <div id="mainContent">
+        <div id="main_top">
+            <div id="IRelease" onclick="javasctipt:window.location.href='/create.html'">我要发布</div>
+            <h2>新捡到的宝贝！</h2>
+            <p class="hd" />
+        </div>
+        <div id="filter_search">
+            <p>宝贝类型：</p>
+            <ul>
+                <li class="selected"><a href="#">全部</a></li>
+                <li><a href="#">电子数码</a></li>
+                <li><a href="#">钱包</a></li>
+                <li><a href="#">证件</a></li>
+                <li><a href="#">书籍</a></li>
+                <li><a href="#">其它</a></li>
+            </ul>
+            <p style="margin-left: 100px;">发布时间：</p>
+            <ul>
+                <li class="selected"><a href="#">全部</a></li>
+                <li><a href="#">一周内</a></li>
+                <li><a href="#">一月内</a></li>
+                <li><a href="#">三月内</a></li>
+                <li><a href="#">一年内</a></li>
+            </ul>
+        </div>
+
+        <div id="tempGoods" style="display: none;"></div>
+        <div id="goods">
+            <div class="tile_outside" onclick="javascript:window.location.href='/FindLost/GetFindGoodsDetail'">
+                <div class="tile_inside">
+                    <div style="width: 180px; color: white; background-color: #28c4d9; top: 150px; z-index: 100;">
+                        Nokia920
+                    </div>
+                    <img class="tile_img" src="img/nokia920_4.png" />
+                    <div class="tile_text">
+                        <span>Nokia920</span>
+                        <p>2013-8-31 19:30:31</p>
+                        <p>我个人表示非常喜欢微软新一代的产品……</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tile_outside">
+                <div class="tile_inside">
+                    <div style="width: 180px; color: white; background-color: #28c4d9; top: 150px; z-index: 100;">
+                        Nokia920
+                    </div>
+                    <img class="tile_img" src="img/nokia920_3.png" />
+                    <div class="tile_text">
+                        <span>通过JQuery实现win8一样酷炫的动态磁贴效果</span>
+                        <p>林宇</p>
+                        <p>我个人表示非常喜欢微软新一代的产品……</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div id="goods_more_loading">
+            <a href="javascript:void(0);" onclick="loadMoreGoods();">点击加载更多</a>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            //ajaxStart() 方法在 AJAX 请求发送前执行函数。它是一个 Ajax 事件。
+            $("#tempGoods").ajaxStart(function () {
+                $("#goods_more_loading").html("<img src=\"/img/loading_small.gif\" />加载中 ...");
+            });
+
+            //ajaxComplete() 方法在 AJAX 请求完成时执行函数。它是一个 Ajax 事件。
+            //与 ajaxSuccess() 不同，通过 ajaxComplete() 方法规定的函数会在请求完成时运行，即使请求并未成功。
+            $("#tempGoods").ajaxComplete(function () {
+                $("#goods_more_loading").html("<a href=\"javascript:void(0);\" onclick=\"loadMoreGoods();\">点击加载更多</a>");
+            });
+
+            $("#tempGoods").load("/FindLost/GetMoreGoods");
+        });
+
+        function loadMoreGoods() {
+            if ($("#tempGoods").html() == "") {
+                $("#goods_more_loading").html("<a>没有更多宝贝了！</a>");
+            }
+            $("#goods").children(".tile_outside:last").after($("#tempGoods").html());//这里就是你要加载的页面内容
+
+            $("#tempGoods").load("/FindLost/GetMoreGoods");
+            bindTileEvent();
+        }
+    </script>
+}

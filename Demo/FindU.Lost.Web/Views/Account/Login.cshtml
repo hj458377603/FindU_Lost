@@ -1,0 +1,34 @@
+﻿@model FindU.Lost.Entity.Entity.Account
+
+@section header{
+    @Styles.Render("~/css/login.css")
+}
+
+
+@section main{
+    <div id="leftWrapper">
+        <div id="upDiv">
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+                @Html.TextBoxFor(m => m.UserName, new { placeholder = "用户名", @class = "login" })
+                <br />
+                @Html.TextBoxFor(m => m.Password, new { placeholder = "密码", @class = "login", type="password" })
+                <br />
+                <div class="login">
+                    <input type="checkbox" name="rememberMe" title="下次自动登录" />下次自动登录
+                    <a href="#" style="float: right; margin-right: -5px;">忘记密码</a>
+                </div>
+                <input type="submit" value="登录" class="login" />
+            }
+        </div>
+
+        <div id="downDiv">
+            <input id="btnReg" type="button" value="注册" class="login" onclick="window.open('/register.html', '_self')" />
+        </div>
+    </div>
+
+    <div id="mainContentWrapper">
+        <img src="~/img/loginImg/loginImg9_600_427.png" />
+    </div>
+
+}

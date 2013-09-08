@@ -1,0 +1,166 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, p, a, img, li, ul, h2, h3, h4, h5, textarea, dd, dt, dl {
+    margin: 0;
+    padding: 0;
+    border: none;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+body, div, ul, li, h1, h2, dl, dt, dd {
+    font: 14px/150% Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+a, area {
+    blr: expression(this.onFocus=this.blur());
+    font-weight: bolder;
+}
+    /* for IE */
+    a:focus {
+        outline-style: none;
+    }
+/* for Firefox */
+input, select, file {
+    vertical-align: middle;
+}
+
+#clear_margin {
+    margin: 0px;
+}
+
+a {
+    color: #039bcc;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px 5px;
+}
+
+    a:hover {
+        background-color: #035c70;
+        color: #FFF;
+    }
+
+    a img {
+        border-width: 0;
+        vertical-align: middle;
+    }
+
+/****************** top *********************/
+
+#top {
+    height: 120px;
+    background-color: #039bcc;
+}
+
+#header {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    display: inline-block;
+    margin: 40px 20px 10px 0;
+    padding: 0;
+    width: 125px;
+    height: 50px;
+    background: url("/img/FinU_Logo/Logo_125_50_white.png") no-repeat;
+}
+
+    .logo:hover {
+        background-color: #039bcc;
+    }
+
+.navbar {
+    float: left;
+    margin-top: 60px;
+    width: 740px;
+    height: 36px;
+}
+
+    .navbar li {
+        float: left;
+    }
+
+        .navbar li a {
+            color: #fff;
+            padding: 5px 10px;
+            margin: 0 15px;
+            font-size: 16px;
+            line-height: 36px;
+            width: 80px;
+        }
+
+    .navbar .exit {
+        float: right;
+    }
+
+        .navbar .exit a {
+            font-size: 14px;
+        }
+
+.on {
+    background: #039bcc;
+    color: #FFF;
+    padding: 2px 5px;
+}
+
+/***************** end top *******************/
+
+
+/****************** content ****************/
+#contentWrapper {
+    width: 960px;
+    margin: 30px auto 0 auto;
+    min-height: 100px;
+}
+/*****************end content***************/
+
+
+/********** foot ***********/
+#footer {
+    width: 960px;
+    padding-top: 5px;
+    margin: 50px auto;
+    font-size: 12px;
+    overflow: hidden;
+    zoom: 1;
+    border-top: 1px dashed #DDD;
+}
+
+.icp {
+    color: #999;
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+    .fright li {
+        float: left;
+    }
+/********* end foot *********/

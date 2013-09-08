@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+@section header{
+    @Styles.Render("~/js/imgAreaSelect/css/imgareaselect-default.css")
+
+    @Scripts.Render("~/js/imgAreaSelect/scripts/jquery.imgareaselect.pack.js")
+}
+
+@section rightContent{
+    <div>
+        <div>
+            <div class="divButton" onclick="uploadImgFile('imgFile');">上传</div>
+            <input id="imgFile" type="file" style="width: 300px; height: 30px; margin-right: 20px;" value="上传图片" />
+            <div class="clearfix"></div>
+            <div>
+                <div class="small_tip">
+                    <b>上传说明</b>
+                    <p class="dashLineMarginTop"></p>
+                    1.照片尺寸需要大于300x300像素<br />
+                    2.照片的大小应小于512KB(如果照片大于512KB,可以通过图片编辑软件缩小照片)<br />
+                    3.你可以上传JPG、JPEG、GIF、PNG或BMP文件。
+                </div>
+            </div>
+        </div>
+
+        <div id="cutImg" class="small_tip" style="display: none;">
+            <b>剪裁图片
+            </b>
+            <div class="dashLineMarginTop"></div>
+            <div>
+                <div class="divButton">确认剪裁</div>
+                <img id="photo" src="/img/bg.jpg" style="width: 300px; float: left;" alt="photo" />
+                <div id="preview" style="width: 100px; height: 100px; overflow: hidden; float: left; margin: 80px 0 0 100px;">
+                    <img src="/img/bg.jpg" style="width: 100px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

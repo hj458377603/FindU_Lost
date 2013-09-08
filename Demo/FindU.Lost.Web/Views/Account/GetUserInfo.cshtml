@@ -1,0 +1,113 @@
+﻿@{
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+@section header{
+    @Styles.Render("~/css/userInfo.css")
+    @Styles.Render("~/css/themes/base/jquery-ui.css")
+
+    @Scripts.Render("~/js/jquery-ui-1.10.3.js")
+    @Scripts.Render("~/js/jquery.ui.datepicker-zh.js")
+}
+
+@section rightContent{
+    <div class="divButton">确认修改</div>
+    <b>个人信息
+    </b>
+    <p class="dashLineMarginTop"></p>
+    <div id="userInfo" style="padding: 10px 0;">
+        <table style="width: 100%;">
+            <tr>
+                <td>用户名：
+                </td>
+                <td>
+                    <label>2014</label>
+                </td>
+                <td>真实姓名：
+                </td>
+                <td>
+                    <input type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>性别：
+                </td>
+                <td>
+                    <select>
+                        <option value="-1">选择性别                                        
+                        </option>
+                        <option value="-1">男                                        
+                        </option>
+                        <option value="-1">女                                        
+                        </option>
+                    </select>
+                </td>
+                <td>出生日期：
+                </td>
+                <td>
+                    <input type="text" id="birthday" readonly="true" />
+                </td>
+            </tr>
+            <tr>
+                <td>校区：
+                </td>
+                <td>
+                    <select>
+                        <option value="-1">选择校区                                        
+                        </option>
+                        <option value="-1">南京财经大学仙林校区                                        
+                        </option>
+                        <option value="-1">南京财经大学福建路校区                                      
+                        </option>
+                        <option value="-1">南京财经大学桥头校区                                      
+                        </option>
+                    </select>
+                </td>
+                <td>院系：
+                </td>
+                <td>
+                    <select>
+                        <option value="-1">选择院系/部门                                        
+                        </option>
+                        <option value="-1">信息工程学院                                       
+                        </option>
+                        <option value="-1">经济学院                                      
+                        </option>
+                        <option value="-1">金融学院                                      
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>电子邮箱：
+                </td>
+                <td>
+                    <input type="text" />
+                </td>
+                <td>手机号：
+                </td>
+                <td>
+                    <input type="text" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $("#birthday").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                "dateFormat": "yy-mm-dd"
+            }).val("").keydown(function () {
+                if (event.keyCode == 8) {
+                    $(this).val("");
+                } else {
+                    event.returnValue = false;
+                }
+            });
+        });
+    </script>
+}

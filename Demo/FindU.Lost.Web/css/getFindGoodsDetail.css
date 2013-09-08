@@ -1,0 +1,23 @@
+﻿
+#imgDiv {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+
+    #imgDiv img {
+        width: 300px;
+        height: 300px;
+    }
+
+#findDetails {
+    float: left;
+    width: 400px;
+    height: 300px;
+    margin-left: 50px;
+}
+
+    #findDetails p {
+        margin: 10px;
+    }

@@ -1,0 +1,148 @@
+﻿@section header{
+    @Styles.Render("~/css/releaseGoods.css")
+    @Styles.Render("~/js/imgAreaSelect/css/imgareaselect-default.css")
+    @Styles.Render("~/css/themes/cupertino/jquery-ui-1.10.3.custom.css")
+
+    @Scripts.Render("~/js/imgAreaSelect/scripts/jquery.imgareaselect.pack.js")
+    @Scripts.Render("~/js/jquery-ui-1.10.3.js")
+    @Scripts.Render("~/js/jquery.ui.datepicker-zh.js")
+}
+
+
+@section main{
+    <div id="mainContent">
+        <div id="content">
+            <h1 class="title">我捡到了一个宝贝</h1>
+            <form id="eform" name="lzform" action="/activity/index/release" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
+                <div class="row">
+                    <label for="title" class="field">宝贝名称<span style="color: red">*</span></label>
+                    <div class="item">
+                        <input id="goodsName" type="text" style="width: 500px;" />
+
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="type" class="field">宝贝类型<span style="color: red">*</span></label>
+                    <div class="item">
+                        <select id="type" name="tag" class="basic-input">
+                            <option value="default">请选择</option>
+                            <option value="1">电子数码</option>
+                            <option value="2">钱包</option>
+                            <option value="3">证件</option>
+                            <option value="4">书籍</option>
+                            <option value="5">其它</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="title" class="field">捡到的地点<span style="color: red">*</span></label>
+                    <div class="item">
+                        <input id="findPlace" type="text" style="width: 500px;" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="time" class="field">捡到的时间<span style="color: red">*</span></label>
+                    <div class="item">
+                        <input id="findDate" type="text" />
+                        <select id="findTime">
+                            <option value="default">请选择时间</option>
+                            <option value="00">00</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                        </select>时左右
+                            
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="field" for="desc">情况描述<span style="color: red">*</span></label>
+                    <br />
+                    <textarea rows="6" style="border: 1px solid #808080; overflow: hidden; width: 500px;"></textarea>
+                </div>
+                <div class="row">
+                    <label class="field" for="cover">宝贝照片<span style="color: red">*</span></label>
+                    <div class="item poster">
+                        <input type="file" id="imgFile" name="cover" style="float: left;" />
+                        <input type="button" value="上传" style="float: left; margin-left: 50px;" onclick="uploadImgFile('imgFile');" />
+                        <div class="clearfix"></div>
+
+                        <div id="cutImg" style="display: none">
+                            <div class="dashLineMarginTop"></div>
+                            <a style="float: right;" href="#uploadImgTip" title="见右侧">查看须知（见右侧）</a>
+                            <h2>剪裁图片
+                            </h2>
+                            <div class="divButton">确认剪裁</div>
+                            <div>
+                                <img id="photo" src="~/img/bg.jpg" style="width: 300px;" alt="photo" />
+                                <div>小图预览</div>
+                                <div id="preview" style="width: 100px; height: 100px; overflow: hidden;">
+                                    <img src="~/img/bg.jpg" style="width: 100px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divButton">发布</div>
+            </form>
+        </div>
+    </div>
+    <div id="rightBar">
+        <div>
+            <h2>感谢与须知</h2>
+            <p>1. <b>拾金不昧</b>❤</p>
+            <p>2. 记得上传一张宝贝照片，方便它的主人寻找</p>
+            <p>3. 请不要发布与寻失无关的言论。</p>
+            <p>4. 本站有权删除不符合本站要求的言论。</p>
+            <p>5. 遇到任何问题可以邮件联系我们获得帮助。</p>
+            <p><b>邮件地址：</b>FindU_Lost@163.com</p>
+        </div>
+        <div class="dashLineMarginTop" id="uploadImgTip" name="uploadImgTip">
+            <h2>上传图片注意事项
+            </h2>
+            <p>1.目前支持JPG、PNG、BMP格式</p>
+            <p>2.图片要求小于2M</p>
+            <p>3.图片分辨率大于300*300</p>
+            <p>4.上传图片后需先裁剪图片</p>
+            <p>5.然后点击确认裁剪，最后再发布</p>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $("#findDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                "dateFormat": "yy-mm-dd"
+            }).val("").keydown(function () {
+                if (event.keyCode == 8) {
+                    $(this).val("");
+                } else {
+                    event.returnValue = false;
+                }
+            });
+        });
+    </script>
+}

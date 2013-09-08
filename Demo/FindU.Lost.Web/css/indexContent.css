@@ -1,0 +1,121 @@
+﻿#contentWrapper {
+	width:960px;
+	margin:30px auto 0 auto;
+}
+#leftBar {
+	float: left;
+	width: 120px;
+	text-align: center;
+}
+
+#type {
+	background-color: #039bcc;
+	padding: 10px 0;
+}
+.ulHead{
+	background-color:#039bcc;
+    color:white;
+    font-weight:bolder;
+}
+/*Left*/
+#leftBar li {
+	line-height: 30px;
+}
+
+.on {
+	background: #035c70;
+	color: #FFF;
+	padding: 2px 5px;
+}
+
+#releaseTime {
+    margin-top:20px;
+    padding: 10px 0;
+    background-color: #039bcc;
+}
+/*mainContent*/
+#mainContent {
+	float: left;
+	width: 960px;
+    min-height:100px;
+	margin-left: 45px;
+}
+
+.hd {
+	border-bottom: 1px dashed #D4D4D4;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+.hd li {
+	font-size: 16px;
+	float: left;
+}
+.event {
+	margin-bottom: 25px;
+	border-bottom: 1px dashed #D4D4D4;
+	padding-bottom: 15px;
+}
+
+.creat-new-event {
+	float: right;
+	background: #8CBE8D;
+}
+.creat-new-event a {
+	color: #FFF!important;
+}
+
+.login-notice {
+	text-align: center;
+	margin-top: 25px;
+}
+
+.list-ad, .hot-event-img {
+	float: left;
+}
+
+.list-ad a {
+    background-color:white;
+}
+
+.list-info {
+	float: left;
+	margin-left: 25px;
+	width: 320px;
+}
+
+.list-info a {
+    margin-left:-5px;
+}
+
+.list-info .event-title {
+	font-size: 14px;
+	line-height: 24px;
+}
+.list-info li {
+	font-size: 12px;
+	color: #666;
+	line-height: 20px;
+}
+/*rightBar*/
+#index-rightBar {
+	width: 250px;
+	float: right;
+}
+
+.hot-event {
+	margin-bottom: 15px;
+}
+.hot-event-img a{
+    background-color:white;
+}
+.hot-event-detail {
+	float: right;
+	width: 190px;
+}
+.hot-event-name {
+	font-size: 12px;
+}
+.hot-event-time {
+	color: #999;
+	font-size: 10px;
+}
